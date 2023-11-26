@@ -1,0 +1,7 @@
+conda activate midas-py310
+python run.py --model_type dpt_beit_large_512 --input_path input --output_path output
+python run.py --model_type dpt_swin2_large_384 --input_path input --output_path output
+python run.py --model_type dpt_swin2_tiny_256 --input_path input --output_path output
+python extract_pointcloud.py
+python extract_object_pc.py
+
