@@ -24,7 +24,7 @@ for idx in range(len(c_imgs)):
     depth = focal / (idepth)
     depth = o3d.geometry.Image(depth)
 
-    rgbd = o3d.geometry.RGBDImage.create_from_color_and_depth(color, depth)
+    rgbd = o3d.geometry.RGBDImage.create_from_color_and_depth(color, depth, convert_rgb_to_intensity=False)
     pcd = o3d.geometry.PointCloud.create_from_rgbd_image(rgbd, intrinsic)
 
     # Extract the name of the depth image file
